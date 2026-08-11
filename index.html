@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olchore Africa Safaris</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+        :root { --green: #1a4d2e; --gold: #c8a951; --sky: #87ceeb; }
+        body { font-family: 'DM Sans', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .fade-in { opacity: 0; transition: opacity 0.45s ease; }
+        .fade-in.visible { opacity: 1; }
+        .hero-section { min-height: calc(100 * min(var(--vh, 1vh), 1vh)); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
+        .faq-answer.open { max-height: 500px; }
+        .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; }
+    </style>
+  <script src="/_sdk/04cc6185e046f597.resizing_sdk.js" type="text/javascript" integrity="sha512-CiE/G92aQF0nxneFg1kdOvXih8sQ1Z2a2QI3+r/WvzJwQqH6+IyB3iL07OkJmpm3ABAaf07+FnqWny98f5sR6w=="></script>
+ <script src="/_sdk/0e8d3a91e1c6f495.data_sdk.js" integrity="sha512-c00oDoGjsMgluCLLEyVl3suwEkgjOGGplVFbsilUoBg4aMKNmsL3mwsc9r0dPn95qiSZyjBousQXgROkAW7p/w=="></script></head>
+ <body data-template-id="__page-root" class="w-full">
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-transparent">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="text-white font-display text-2xl font-bold" data-template-id="nav-logo">Olchore Africa Safaris</a>
+    <div class="hidden md:flex items-center gap-8">
+     <a href="#destinations" class="text-white hover:text-yellow-300 transition-colors text-sm font-medium">Destinations</a> <a href="#tours" class="text-white hover:text-yellow-300 transition-colors text-sm font-medium">Tours</a> <a href="#gallery" class="text-white hover:text-yellow-300 transition-colors text-sm font-medium">Gallery</a> <a href="#testimonials" class="text-white hover:text-yellow-300 transition-colors text-sm font-medium">Reviews</a> <a href="#contact" class="text-white hover:text-yellow-300 transition-colors text-sm font-medium">Contact</a> <a href="#booking" class="bg-[#c8a951] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-600 transition-colors">Book Now</a>
+    </div><button id="mobile-menu-btn" class="md:hidden text-white"><i data-lucide="menu" style="width:28px;height:28px"></i></button>
+   </div>
+   <div id="mobile-menu" class="hidden md:hidden bg-[#1a4d2e] px-6 pb-4">
+    <a href="#destinations" class="block py-2 text-white">Destinations</a> <a href="#tours" class="block py-2 text-white">Tours</a> <a href="#gallery" class="block py-2 text-white">Gallery</a> <a href="#testimonials" class="block py-2 text-white">Reviews</a> <a href="#contact" class="block py-2 text-white">Contact</a> <a href="#booking" class="block py-2 text-[#c8a951] font-semibold">Book Now</a>
+   </div>
+  </nav><!-- Hero -->
+  <header class="hero-section relative flex items-center justify-center overflow-hidden">
+   <img src="images/olchore.jpeg" class="canva-image absolute inset-0 w-full h-full object-cover" loading="eager">
+   <div class="absolute inset-0 bg-black/40"></div>
+   <div class="relative z-10 text-center px-6 max-w-4xl">
+    <h1 data-template-id="hero-title" class="canva-text font-display text-white text-5xl md:text-7xl font-bold mb-6 leading-tight">Discover The Magic Of Kenya</h1>
+    <p data-template-id="hero-subtitle" class="canva-text text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Unforgettable safari experiences, pristine beaches, and authentic cultural encounters — crafted with care by a team that knows Kenya intimately.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+     <a href="#tours" data-template-id="hero-cta-1" class="canva-button bg-[#c8a951] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-600 transition-colors">Explore Tours</a> <a href="#contact" data-template-id="hero-cta-2" class="canva-button border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[#1a4d2e] transition-colors">Get A Quote</a>
+    </div>
+   </div>
+  </header><!-- Explore Kenya / Destinations -->
+  <section id="destinations" class="py-20 px-6 bg-white">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+     <h2 data-template-id="dest-title" class="canva-text font-display text-[#1a4d2e] font-bold mb-4">Explore Kenya</h2>
+     <p data-template-id="dest-subtitle" class="canva-text text-gray-600 max-w-2xl mx-auto">From the sweeping savannas of the Mara to the turquoise waters of the coast, Kenya offers a world of wonder.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <!-- Maasai Mara -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/masaai.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-mara-name" class="canva-text text-white font-bold text-xl">Maasai Mara</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-mara-desc" class="canva-text text-gray-600 text-sm">Witness the Great Migration and encounter the Big Five in Africa's most iconic wildlife reserve.</p>
+      </div>
+     </div><!-- Amboseli -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/amboseli.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-amboseli-name" class="canva-text text-white font-bold text-xl">Amboseli</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-amboseli-desc" class="canva-text text-gray-600 text-sm">Spectacular elephant herds against the breathtaking backdrop of Mount Kilimanjaro.</p>
+      </div>
+     </div><!-- Diani Beach -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/diani.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-diani-name" class="canva-text text-white font-bold text-xl">Diani Beach</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-diani-desc" class="canva-text text-gray-600 text-sm">Powder-white sands, warm turquoise waters, and world-class coastal relaxation.</p>
+      </div>
+     </div><!-- Tsavo -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/tsavo.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-tsavo-name" class="canva-text text-white font-bold text-xl">Tsavo</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-tsavo-desc" class="canva-text text-gray-600 text-sm">Kenya's largest park — home to the famous red elephants and vast untamed wilderness.</p>
+      </div>
+     </div><!-- Lake Nakuru -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/lake_nakuru.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-nakuru-name" class="canva-text text-white font-bold text-xl">Lake Nakuru</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-nakuru-desc" class="canva-text text-gray-600 text-sm">A flamingo paradise surrounded by dramatic landscapes and diverse birdlife.</p>
+      </div>
+     </div><!-- Naivasha -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/lake_naivasha.jpg   " class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-naivasha-name" class="canva-text text-white font-bold text-xl">Lake Naivasha</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-naivasha-desc" class="canva-text text-gray-600 text-sm">Boat safaris among hippos, bird-watching, and peaceful lakeside escapes in the Rift Valley.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Tour Packages -->
+  <section id="tours" class="py-20 px-6 bg-gray-50">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+     <h2 data-template-id="tours-title" class="canva-text font-display text-[#1a4d2e] font-bold mb-4">Featured Safari Packages</h2>
+     <p data-template-id="tours-subtitle" class="canva-text text-gray-600 max-w-2xl mx-auto">Thoughtfully designed itineraries for every kind of traveller. All tours include transport, accommodation, and an expert guide.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <!-- Tour 1 -->
+     <div data-template-id="tour-card-1" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/masaaisafari.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-1-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">3 Days</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-1-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Masaai Mara Safari</h3>
+       <p data-template-id="tour-1-highlights" class="canva-text text-gray-600 text-sm mb-4">Game drives • Big Five • Cultural visit • Balloon option</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-1-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 85000</span> <a href="#booking" data-template-id="tour-1-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+     </div><!-- Tour 2 -->
+     <div data-template-id="tour-card-2" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/kilimanjaro.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-2-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">2 Days</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-2-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Amboseli & Kilimanjaro Views</h3>
+       <p data-template-id="tour-2-highlights" class="canva-text text-gray-600 text-sm mb-4">Elephant herds • Kilimanjaro views • Photography • Swamp area</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-2-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 55000</span> <a href="#booking" data-template-id="tour-2-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+     </div><!-- Tour 3 -->
+     <div data-template-id="tour-card-3" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/diani_trip.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-3-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">5 Days</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-3-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Diani Beach Escape</h3>
+       <p data-template-id="tour-3-highlights" class="canva-text text-gray-600 text-sm mb-4">White sand beach • Snorkelling • Dhow cruise • Seafood dining</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-3-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 100000</span> <a href="#booking" data-template-id="tour-3-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+     </div><!-- Tour 4 -->
+     <div data-template-id="tour-card-4" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/tsavo_trip.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-4-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">3 Days</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-4-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Tsavo Wildlife Adventure</h3>
+       <p data-template-id="tour-4-highlights" class="canva-text text-gray-600 text-sm mb-4">Red elephants • Mzima Springs • Shetani Lava Flow • Night game drive</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-4-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 68000</span> <a href="#booking" data-template-id="tour-4-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+     </div><!-- Tour 5 -->
+     <div data-template-id="tour-card-5" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/nakuru_flamingo.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-5-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">2 Days</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-5-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Lake Nakuru Flamingo Tour</h3>
+       <p data-template-id="tour-5-highlights" class="canva-text text-gray-600 text-sm mb-4">Flamingos • Rhinos • Baboon Cliff viewpoint • Boat ride</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-5-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 45000</span> <a href="#booking" data-template-id="tour-5-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+     </div><!-- Tour 6 -->
+     <div data-template-id="tour-card-6" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/naivasha_trip.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-6-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">1 Day</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-6-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Lake Naivasha Day Trip</h3>
+       <p data-template-id="tour-6-highlights" class="canva-text text-gray-600 text-sm mb-4">Boat safari • Hippos • Crescent Island walk • Bird watching</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-6-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 20000</span> <a href="#booking" data-template-id="tour-6-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Why Choose Us -->
+  <section class="py-20 px-6 bg-white">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+     <h2 data-template-id="why-title" class="canva-text font-display text-[#1a4d2e] font-bold mb-4">Why Choose Olchore Africa Safaris</h2>
+     <p data-template-id="why-subtitle" class="canva-text text-gray-600 max-w-2xl mx-auto">We're passionate about sharing the real Kenya — with care, integrity, and attention to every detail.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+     <div class="fade-in text-center p-6">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#1a4d2e]/10 rounded-full flex items-center justify-center"><i data-lucide="shield-check" style="width:32px;height:32px;color:#1a4d2e"></i>
+      </div>
+      <h3 data-template-id="why-1-title" class="canva-text font-bold text-[#1a4d2e] mb-2">Reliable Service</h3>
+      <p data-template-id="why-1-desc" class="canva-text text-gray-600 text-sm">Dependable planning and execution so you can focus on enjoying the journey.</p>
+     </div>
+     <div class="fade-in text-center p-6">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#1a4d2e]/10 rounded-full flex items-center justify-center"><i data-lucide="heart" style="width:32px;height:32px;color:#1a4d2e"></i>
+      </div>
+      <h3 data-template-id="why-2-title" class="canva-text font-bold text-[#1a4d2e] mb-2">Personalised Trips</h3>
+      <p data-template-id="why-2-desc" class="canva-text text-gray-600 text-sm">Every itinerary is tailored to your interests, pace, and budget.</p>
+     </div>
+     <div class="fade-in text-center p-6">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#1a4d2e]/10 rounded-full flex items-center justify-center"><i data-lucide="map-pin" style="width:32px;height:32px;color:#1a4d2e"></i>
+      </div>
+      <h3 data-template-id="why-3-title" class="canva-text font-bold text-[#1a4d2e] mb-2">Local Knowledge</h3>
+      <p data-template-id="why-3-desc" class="canva-text text-gray-600 text-sm">Born and raised in Kenya — we know the hidden gems most visitors never see.</p>
+     </div>
+     <div class="fade-in text-center p-6">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#1a4d2e]/10 rounded-full flex items-center justify-center"><i data-lucide="phone" style="width:32px;height:32px;color:#1a4d2e"></i>
+      </div>
+      <h3 data-template-id="why-4-title" class="canva-text font-bold text-[#1a4d2e] mb-2">Always Available</h3>
+      <p data-template-id="why-4-desc" class="canva-text text-gray-600 text-sm">Reach us anytime via WhatsApp, email, or phone — before, during, and after your trip.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Testimonials -->
+  <section id="testimonials" class="py-20 px-6 bg-[#f8faf8]">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+     <h2 data-template-id="test-title" class="canva-text font-display text-[#1a4d2e] font-bold mb-4">What Our Guests Say</h2>
+     <p data-template-id="test-subtitle" class="canva-text text-gray-600"></p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div data-template-id="test-card-1" class="canva-card fade-in bg-white p-8 rounded-2xl shadow-md">
+      <div class="flex mb-4 text-[#c8a951]"><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i>
+      </div>
+      <p data-template-id="test-1-text" class="canva-text text-gray-600 italic mb-4">"An incredible experience from start to finish. The attention to detail was remarkable." </p>
+      <p data-template-id="test-1-name" class="canva-text font-semibold text-[#1a4d2e]">Amina & David — Nairobi</p>
+     </div>
+     <div data-template-id="test-card-2" class="canva-card fade-in bg-white p-8 rounded-2xl shadow-md">
+      <div class="flex mb-4 text-[#c8a951]"><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i>
+      </div>
+      <p data-template-id="test-2-text" class="canva-text text-gray-600 italic mb-4">"Kenya exceeded every expectation. The guides were knowledgeable and warm." </p>
+      <p data-template-id="test-2-name" class="canva-text font-semibold text-[#1a4d2e]">James W. — United Kingdom</p>
+     </div>
+     <div data-template-id="test-card-3" class="canva-card fade-in bg-white p-8 rounded-2xl shadow-md">
+      <div class="flex mb-4 text-[#c8a951]"><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i><i data-lucide="star" style="width:18px;height:18px;fill:#c8a951"></i>
+      </div>
+      <p data-template-id="test-3-text" class="canva-text text-gray-600 italic mb-4">"A truly personalised safari — we felt like explorers, not tourists." </p>
+      <p data-template-id="test-3-name" class="canva-text font-semibold text-[#1a4d2e]">Sarah K. — South Africa</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Gallery -->
+  <section id="gallery" class="py-20 px-6 bg-white">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+     <h2 data-template-id="gallery-title" class="canva-text font-display text-[#1a4d2e] font-bold mb-4">Safari Gallery</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/lion.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/giraffe.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/community.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/zebra.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/tours.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/flamingoes.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+    </div>
+   </div>
+  </section><!-- FAQs -->
+  <section class="py-20 px-6 bg-gray-50">
+   <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+     <h2 data-template-id="faq-title" class="canva-text font-display text-[#1a4d2e] font-bold mb-4">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-4">
+     <div class="fade-in bg-white rounded-xl shadow-sm">
+      <button class="faq-toggle w-full text-left p-6 flex justify-between items-center" aria-expanded="false"> <span data-template-id="faq-1-q" class="canva-text font-semibold text-[#1a4d2e]">What is included in your safari packages?</span> <i data-lucide="chevron-down" style="width:20px;height:20px;color:#1a4d2e" class="transition-transform"></i></button>
+      <div class="faq-answer px-6 pb-6">
+       <p data-template-id="faq-1-a" class="canva-text text-gray-600">Our packages typically include transport in a 4x4 safari vehicle, accommodation, park entry fees, an experienced guide, and meals as specified in the itinerary. Flights and travel insurance are not included unless stated.</p>
+      </div>
+     </div>
+     <div class="fade-in bg-white rounded-xl shadow-sm">
+      <button class="faq-toggle w-full text-left p-6 flex justify-between items-center" aria-expanded="false"> <span data-template-id="faq-2-q" class="canva-text font-semibold text-[#1a4d2e]">How do I book a safari with Olchore Africa Safaris?</span> <i data-lucide="chevron-down" style="width:20px;height:20px;color:#1a4d2e" class="transition-transform"></i></button>
+      <div class="faq-answer px-6 pb-6">
+       <p data-template-id="faq-2-a" class="canva-text text-gray-600">Simply fill in the inquiry form on this page, send us a WhatsApp message, or email us. We'll respond within 24 hours with a tailored itinerary and quote.</p>
+      </div>
+     </div>
+     <div class="fade-in bg-white rounded-xl shadow-sm">
+      <button class="faq-toggle w-full text-left p-6 flex justify-between items-center" aria-expanded="false"> <span data-template-id="faq-3-q" class="canva-text font-semibold text-[#1a4d2e]">Can you create a custom itinerary?</span> <i data-lucide="chevron-down" style="width:20px;height:20px;color:#1a4d2e" class="transition-transform"></i></button>
+      <div class="faq-answer px-6 pb-6">
+       <p data-template-id="faq-3-a" class="canva-text text-gray-600">Absolutely. We specialise in personalised trips. Tell us your interests, budget, and available dates, and we'll design something just for you.</p>
+      </div>
+     </div>
+     <div class="fade-in bg-white rounded-xl shadow-sm">
+      <button class="faq-toggle w-full text-left p-6 flex justify-between items-center" aria-expanded="false"> <span data-template-id="faq-4-q" class="canva-text font-semibold text-[#1a4d2e]">Is Kenya safe For Tourists?</span> <i data-lucide="chevron-down" style="width:20px;height:20px;color:#1a4d2e" class="transition-transform"></i></button>
+      <div class="faq-answer px-6 pb-6">
+       <p data-template-id="faq-4-a" class="canva-text text-gray-600">Kenya welcomes millions of visitors each year. Our guides are trained in safety protocols, and we stick to well-established routes and reputable lodges. We're happy to discuss any concerns before your trip.</p>
+      </div>
+     </div>
+     <div class="fade-in bg-white rounded-xl shadow-sm">
+      <button class="faq-toggle w-full text-left p-6 flex justify-between items-center" aria-expanded="false"> <span data-template-id="faq-5-q" class="canva-text font-semibold text-[#1a4d2e]">What is the best time to visit Kenya?</span> <i data-lucide="chevron-down" style="width:20px;height:20px;color:#1a4d2e" class="transition-transform"></i></button>
+      <div class="faq-answer px-6 pb-6">
+       <p data-template-id="faq-5-a" class="canva-text text-gray-600">Kenya is a year-round destination. The Great Migration in the Mara peaks between July and October. Dry seasons (January–March, July–October) are ideal for game viewing. The coast is beautiful all year.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Booking / Contact -->
+  <section id="booking" class="py-20 px-6 bg-white">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+     <h2 data-template-id="booking-title" class="canva-text font-display text-[#1a4d2e] font-bold mb-4">Book Your Safari</h2>
+     <p data-template-id="booking-subtitle" class="canva-text text-gray-600 max-w-2xl mx-auto">Ready for your Kenyan adventure? Fill in the form and we'll get back to you within 24 hours with a personalised quote.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+     <!-- Form -->
+     <div class="fade-in">
+      <form id="booking-form" class="space-y-5">
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+         <label for="b-name" data-template-id="form-name-label" class="canva-text text-sm font-medium text-gray-700 mb-1 block">Full Name</label> <input id="b-name" name="name" type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent outline-none">
+        </div>
+        <div>
+         <label for="b-email" data-template-id="form-email-label" class="canva-text text-sm font-medium text-gray-700 mb-1 block">Email</label> <input id="b-email" name="email" type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent outline-none">
+        </div>
+       </div>
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+         <label for="b-phone" data-template-id="form-phone-label" class="canva-text text-sm font-medium text-gray-700 mb-1 block">Phone Number</label> <input id="b-phone" name="phone" type="tel" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent outline-none">
+        </div>
+        <div>
+         <label for="b-tour" data-template-id="form-tour-label" class="canva-text text-sm font-medium text-gray-700 mb-1 block">Select Tour</label> <select id="b-tour" name="tour" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent outline-none bg-white"> <option value="">Choose a tour...</option> <option>Maasai Mara Safari</option> <option>Amboseli &amp; Kilimanjaro Views</option> <option>Diani Beach Escape</option> <option>Tsavo Wildlife Adventure</option> <option>Lake Nakuru Flamingo Tour</option> <option>Lake Naivasha Day Trip</option> <option>Custom Safari</option> </select>
+        </div>
+       </div>
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+         <label for="b-date" data-template-id="form-date-label" class="canva-text text-sm font-medium text-gray-700 mb-1 block">Preferred Travel Date</label> <input id="b-date" name="travel_date" type="date" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent outline-none">
+        </div>
+        <div>
+         <label for="b-travelers" data-template-id="form-travelers-label" class="canva-text text-sm font-medium text-gray-700 mb-1 block">Number of Travellers</label> <select id="b-travelers" name="travelers" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent outline-none bg-white"> <option value="">Select...</option> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option> </select>
+        </div>
+       </div>
+       <div>
+        <label for="b-message" data-template-id="form-msg-label" class="canva-text text-sm font-medium text-gray-700 mb-1 block">Message / Special Requests</label> <textarea id="b-message" name="message" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent outline-none resize-none"></textarea>
+       </div><button type="submit" id="submit-btn" data-template-id="form-submit" class="canva-button w-full bg-[#1a4d2e] text-white py-4 rounded-full font-semibold text-lg hover:bg-green-900 transition-colors">Send Inquiry</button>
+       <div id="form-success" class="hidden text-center py-4 text-green-700 font-semibold">
+        Thank you! Your inquiry has been submitted. We'll get back to you shortly.
+       </div>
+       <div id="form-error" class="hidden text-center py-4 text-red-600 font-semibold">
+        Something went wrong. Please try again or reach us via WhatsApp.
+       </div>
+      </form>
+     </div><!-- Contact Info -->
+     <div id="contact" class="space-y-8">
+      <div>
+       <h3 data-template-id="contact-heading" class="canva-text font-display font-bold text-[#1a4d2e] text-2xl mb-6">Get in Touch</h3>
+       <div class="space-y-4">
+        <div class="flex items-start gap-4">
+         <i data-lucide="map-pin" style="width:22px;height:22px;color:#1a4d2e;flex-shrink:0;margin-top:2px"></i>
+         <p data-template-id="contact-address" class="canva-text text-gray-700">Nairobi, Kenya</p>
+        </div>
+        <div class="flex items-start gap-4">
+         <i data-lucide="phone" style="width:22px;height:22px;color:#1a4d2e;flex-shrink:0;margin-top:2px"></i>
+         <p data-template-id="contact-phone" class="canva-text text-gray-700">+254 723 110 655</p>
+        </div>
+        <div class="flex items-start gap-4">
+         <i data-lucide="mail" style="width:22px;height:22px;color:#1a4d2e;flex-shrink:0;margin-top:2px"></i>
+         <p data-template-id="contact-email" class="canva-text text-gray-700">olchoreafricasafaris@gmail.com</p>
+        </div>
+        <div class="flex items-start gap-4">
+         <i data-lucide="clock" style="width:22px;height:22px;color:#1a4d2e;flex-shrink:0;margin-top:2px"></i>
+         <p data-template-id="contact-hours" class="canva-text text-gray-700">Mon-Fri: 8:00 AM-6:00 PM | Sat 9:00 AM-4:00 PM</p>
+        </div>
+       </div>
+      </div><a href="https://wa.me/254723110655" target="_blank" rel="noopener noreferrer" data-template-id="whatsapp-btn" class="canva-button inline-flex items-center gap-3 bg-[#25d366] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-colors">Chat on WhatsApp</a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer data-template-id="footer-section" class="canva-footer bg-[#1a4d2e] text-white py-16 px-6">
+   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+     <h4 data-template-id="footer-brand" class="canva-text font-display text-2xl font-bold mb-4 text-white">Olchore Africa Safaris</h4>
+     <p data-template-id="footer-tagline" class="canva-text text-white/70 text-sm">Authentic Kenyan safari experiences, crafted with passion and local expertise.</p>
+    </div>
+    <div>
+     <h5 data-template-id="footer-nav-title" class="canva-text font-semibold mb-4 text-[#c8a951]">Quick Links</h5>
+     <nav class="space-y-2 text-sm">
+      <a href="#destinations" class="block text-white/70 hover:text-white transition-colors">Destinations</a> <a href="#tours" class="block text-white/70 hover:text-white transition-colors">Tours</a> <a href="#gallery" class="block text-white/70 hover:text-white transition-colors">Gallery</a> <a href="#testimonials" class="block text-white/70 hover:text-white transition-colors">Reviews</a> <a href="#booking" class="block text-white/70 hover:text-white transition-colors">Book Now</a>
+     </nav>
+    </div>
+    <div>
+     <h5 data-template-id="footer-contact-title" class="canva-text font-semibold mb-4 text-[#c8a951]">Contact</h5>
+     <div class="space-y-2 text-sm text-white/70">
+      <p>Nairobi, Kenya</p>
+      <p>+254 723 110 655</p>
+      <p>olchoreafricasafaris@gmail.com</p>
+     </div>
+    </div>
+    <div>
+     <h5 data-template-id="footer-hours-title" class="canva-text font-semibold mb-4 text-[#c8a951]">Business Hours</h5>
+     <div class="space-y-2 text-sm text-white/70">
+      <p>Mon – Fri: 8:00 AM – 6:00 PM</p>
+      <p>Sat: 9:00 AM – 4:00 PM</p>
+      <p>Sun: By appointment</p>
+     </div>
+     <div class="flex gap-4 mt-6">
+      <a href="#" class="text-white/70 hover:text-[#c8a951] transition-colors"><i data-lucide="facebook" style="width:20px;height:20px"></i></a> <a href="#" class="text-white/70 hover:text-[#c8a951] transition-colors"><i data-lucide="instagram" style="width:20px;height:20px"></i></a> <a href="#" class="text-white/70 hover:text-[#c8a951] transition-colors"><i data-lucide="twitter" style="width:20px;height:20px"></i></a>
+     </div>
+    </div>
+   </div>
+   <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 text-center">
+    <p data-template-id="footer-copy" class="canva-text text-white/50 text-sm"></p>
+   </div>
+  </footer><!-- WhatsApp Float --> <a href="https://wa.me/254723110655" target="_blank" rel="noopener noreferrer" class="whatsapp-float w-14 h-14 bg-[#25d366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" aria-label="Chat on WhatsApp">
+   <svg viewbox="0 0 24 24" width="28" height="28" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" /><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.625-1.47A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.115 0-4.142-.657-5.856-1.893l-.42-.296-2.743.872.87-2.682-.314-.44A9.715 9.715 0 012.25 12C2.25 6.624 6.624 2.25 12 2.25S21.75 6.624 21.75 12 17.376 21.75 12 21.75z" />
+   </svg></a>
+  <script src="/_sdk/1a0e63f7a958ec3e.editing_sdk.js" integrity="sha512-lW+iibZ5vXaBl3IQ1K3ooQE1gfdDZxiO+Y7NpWdeypLOwr1WIYo3edm3nu+wyePemyM75tcU3yV7YyImK9wxMQ=="></script>
+  <script src="/_sdk/0e8d3a91e1c6f495.data_sdk.js" integrity="sha512-c00oDoGjsMgluCLLEyVl3suwEkgjOGGplVFbsilUoBg4aMKNmsL3mwsc9r0dPn95qiSZyjBousQXgROkAW7p/w=="></script>
+  <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // FAQ
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const answer = btn.nextElementSibling;
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', !expanded);
+                answer.classList.toggle('open');
+                btn.querySelector('i, svg').style.transform = expanded ? '' : 'rotate(180deg)';
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-menu').classList.add('hidden'); }
+            });
+        });
+
+        // Data SDK for booking form
+
+
+        lucide.createIcons();
+    </script>
+ </body>
+</html>
