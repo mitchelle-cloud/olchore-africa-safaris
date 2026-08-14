@@ -44,6 +44,157 @@
     </div>
    </div>
   </header><!-- Explore Kenya / Destinations -->
+
+<!-- Premium Safari Video Slideshow -->
+<section class="py-16 px-6 bg-[#1a4d2e]">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-8">
+      <h2 class="font-display text-white text-4xl md:text-5xl font-bold mb-4">
+        Experience The Magic Of Kenya
+      </h2>
+
+      <p class="text-white/80 max-w-2xl mx-auto">
+        From breathtaking wildlife to unforgettable landscapes, discover Kenya through our eyes.
+      </p>
+    </div>
+
+    <!-- Video Slideshow -->
+    <div class="relative max-w-5xl mx-auto">
+
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+
+        <!-- Video 1 -->
+        <video
+          id="safariVideo1"
+          class="safari-slide w-full h-[300px] md:h-[550px] object-cover"
+          autoplay
+          muted
+          playsinline
+          preload="auto">
+          <source src="images/safari.mp4" type="video/mp4">
+        </video>
+
+        <!-- Video 2 -->
+        <video
+          id="safariVideo2"
+          class="safari-slide hidden w-full h-[300px] md:h-[550px] object-cover"
+          muted
+          playsinline
+          preload="auto">
+          <source src="images/safari2.mp4" type="video/mp4">
+        </video>
+
+        <!-- Left Arrow -->
+        <button
+          id="safariPrev"
+          class="absolute left-5 md:left-7 top-1/2 -translate-y-1/2
+                 w-11 h-11 md:w-14 md:h-14
+                 rounded-full
+                 bg-black/30 backdrop-blur-md
+                 border border-white/40
+                 text-white
+                 flex items-center justify-center
+                 text-3xl md:text-4xl
+                 font-light
+                 opacity-70
+                 hover:opacity-100
+                 hover:bg-black/50
+                 hover:border-[#c8a951]
+                 hover:text-[#c8a951]
+                 transition-all duration-300
+                 z-10"
+          aria-label="Previous video">
+          ‹
+        </button>
+
+        <!-- Right Arrow -->
+        <button
+          id="safariNext"
+          class="absolute right-5 md:right-7 top-1/2 -translate-y-1/2
+                 w-11 h-11 md:w-14 md:h-14
+                 rounded-full
+                 bg-black/30 backdrop-blur-md
+                 border border-white/40
+                 text-white
+                 flex items-center justify-center
+                 text-3xl md:text-4xl
+                 font-light
+                 opacity-70
+                 hover:opacity-100
+                 hover:bg-black/50
+                 hover:border-[#c8a951]
+                 hover:text-[#c8a951]
+                 transition-all duration-300
+                 z-10"
+          aria-label="Next video">
+          ›
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const video1 = document.getElementById("safariVideo1");
+  const video2 = document.getElementById("safariVideo2");
+
+  const prevButton = document.getElementById("safariPrev");
+  const nextButton = document.getElementById("safariNext");
+
+  let currentVideo = 1;
+
+  function showVideo1() {
+    video2.pause();
+    video2.classList.add("hidden");
+
+    video1.classList.remove("hidden");
+    video1.currentTime = 0;
+    video1.play();
+
+    currentVideo = 1;
+  }
+
+  function showVideo2() {
+    video1.pause();
+    video1.classList.add("hidden");
+
+    video2.classList.remove("hidden");
+    video2.currentTime = 0;
+    video2.play();
+
+    currentVideo = 2;
+  }
+
+  function nextVideo() {
+    if (currentVideo === 1) {
+      showVideo2();
+    } else {
+      showVideo1();
+    }
+  }
+
+  function previousVideo() {
+    if (currentVideo === 1) {
+      showVideo2();
+    } else {
+      showVideo1();
+    }
+  }
+
+  /* Automatically move to the next video */
+  video1.addEventListener("ended", showVideo2);
+  video2.addEventListener("ended", showVideo1);
+
+  /* Arrow controls */
+  nextButton.addEventListener("click", nextVideo);
+  prevButton.addEventListener("click", previousVideo);
+</script>
+
+<!-- Explore Kenya / Destinations -->
   <section id="destinations" class="py-20 px-6 bg-white">
    <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in">
@@ -122,6 +273,42 @@
       </div>
       <div class="p-5 bg-white">
        <p data-template-id="dest-naivasha-desc" class="canva-text text-gray-600 text-sm">Boat safaris among hippos, bird-watching, and peaceful lakeside escapes in the Rift Valley.</p>
+      </div>
+      </div><!-- Nairobi National Park -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/nairobi.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-nairobi-name" class="canva-text text-white font-bold text-xl">Nairobi National Park</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-nakuru-desc" class="canva-text text-gray-600 text-sm">Urban Jungle Meets the Real Jungle: Safari Nairobi National Park.</p>
+      </div>
+      </div><!-- Samburu-->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/samburuc.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-samburu-name" class="canva-text text-white font-bold text-xl">Samburu National Reserve</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-nakuru-desc" class="canva-text text-gray-600 text-sm">Untamed, Uncrowded, Unforgettable: Venture North to Samburu.</p>
+      </div>
+      </div><!-- Olpejeta -->
+     <div class="fade-in rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="relative h-64 overflow-hidden">
+       <img src="images/olpejeta.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+       <div class="absolute bottom-4 left-4">
+        <h3 data-template-id="dest-olpejeta-name" class="canva-text text-white font-bold text-xl">Olpejeta</h3>
+       </div>
+      </div>
+      <div class="p-5 bg-white">
+       <p data-template-id="dest-nakuru-desc" class="canva-text text-gray-600 text-sm">Where Conservation Meets the Extraordinary: Safari the Equator at Ol Pejeta.</p>
       </div>
      </div>
     </div>
@@ -206,7 +393,42 @@
         <span data-template-id="tour-6-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 20000</span> <a href="#booking" data-template-id="tour-6-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
        </div>
       </div>
-     </div>
+     </div><!--Tour 7-->
+     <div data-template-id="tour-card-6" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/nairobi.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-6-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">1 Day</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-6-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Nairobi National Park</h3>
+       <p data-template-id="tour-6-highlights" class="canva-text text-gray-600 text-sm mb-4">Urban • Iconic • Skyscrapers • Wildlife</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-6-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 20000</span> <a href="#booking" data-template-id="tour-6-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+      </div><!--Tour 8-->
+      <div data-template-id="tour-card-6" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/olpejeta.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-6-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">2 Days</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-6-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Olpejeta</h3>
+       <p data-template-id="tour-6-highlights" class="canva-text text-gray-600 text-sm mb-4">Rhinos • Chipmanzees • Conservation • Vistas</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-6-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 45000</span> <a href="#booking" data-template-id="tour-6-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
+      </div><!--Tour 9-->
+      <div data-template-id="tour-card-6" class="canva-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+      <div class="relative h-52 overflow-hidden">
+       <img src="images/samburuc.jpg" class="canva-image w-full h-full object-cover" loading="lazy"> <span data-template-id="tour-6-duration" class="canva-tag absolute top-4 left-4 bg-[#1a4d2e] text-white px-3 py-1 rounded-full text-xs font-semibold">3 Days</span>
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="tour-6-title" class="canva-text font-display font-bold text-[#1a4d2e] mb-2">Samburu National Reserve</h3>
+       <p data-template-id="tour-6-highlights" class="canva-text text-gray-600 text-sm mb-4">Cultural • Rugged • Rare • Exclusive</p>
+       <div class="flex items-center justify-between">
+        <span data-template-id="tour-6-price" class="canva-text text-[#c8a951] font-bold text-xl">From Ksh 21500</span> <a href="#booking" data-template-id="tour-6-cta" class="canva-button bg-[#1a4d2e] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-900 transition-colors">Book Now</a>
+       </div>
+      </div>
     </div>
    </div>
   </section><!-- Why Choose Us -->
@@ -280,16 +502,22 @@
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
      <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/lion.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
      </div>
-     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/giraffe.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/giraffes.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
      </div>
-     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/community.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/mcommunity.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
      </div>
-     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/zebra.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/zebras.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
      </div>
-     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/tours.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/tourz.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
      </div>
-     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/flamingoes.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/flamingoes2.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
      </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/naivasha_zebra.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/wildbeasts.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+     <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/balloon.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+    
     </div>
    </div>
   </section><!-- FAQs -->
