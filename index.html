@@ -85,6 +85,17 @@
           <source src="images/safari2.mp4" type="video/mp4">
         </video>
 
+         <!-- Video 3 -->
+        <video
+          id="safariVideo3"
+          class="safari-slide w-full h-[300px] md:h-[550px] object-cover"
+          autoplay
+          muted
+          playsinline
+          preload="auto">
+          <source src="images/safari3.mp4" type="video/mp4">
+        </video>
+
         <!-- Left Arrow -->
         <button
           id="safariPrev"
@@ -141,55 +152,43 @@
 <script>
   const video1 = document.getElementById("safariVideo1");
   const video2 = document.getElementById("safariVideo2");
+  const video3 = document.getElementById("safariVideo3");
+
+  const videos = [video1, video2, video3];
 
   const prevButton = document.getElementById("safariPrev");
   const nextButton = document.getElementById("safariNext");
 
-  let currentVideo = 1;
+  let currentVideo = 0;
 
-  function showVideo1() {
-    video2.pause();
-    video2.classList.add("hidden");
+  function showVideo(index) {
+    videos.forEach((video, i) => {
+      video.pause();
+      video.classList.toggle("hidden", i !== index);
+    });
 
-    video1.classList.remove("hidden");
-    video1.currentTime = 0;
-    video1.play();
+    videos[index].currentTime = 0;
+    videos[index].play();
 
-    currentVideo = 1;
-  }
-
-  function showVideo2() {
-    video1.pause();
-    video1.classList.add("hidden");
-
-    video2.classList.remove("hidden");
-    video2.currentTime = 0;
-    video2.play();
-
-    currentVideo = 2;
+    currentVideo = index;
   }
 
   function nextVideo() {
-    if (currentVideo === 1) {
-      showVideo2();
-    } else {
-      showVideo1();
-    }
+    currentVideo = (currentVideo + 1) % videos.length;
+    showVideo(currentVideo);
   }
 
   function previousVideo() {
-    if (currentVideo === 1) {
-      showVideo2();
-    } else {
-      showVideo1();
-    }
+    currentVideo =
+      (currentVideo - 1 + videos.length) % videos.length;
+
+    showVideo(currentVideo);
   }
 
-  /* Automatically move to the next video */
-  video1.addEventListener("ended", showVideo2);
-  video2.addEventListener("ended", showVideo1);
+  video1.addEventListener("ended", nextVideo);
+  video2.addEventListener("ended", nextVideo);
+  video3.addEventListener("ended", nextVideo);
 
-  /* Arrow controls */
   nextButton.addEventListener("click", nextVideo);
   prevButton.addEventListener("click", previousVideo);
 </script>
@@ -517,6 +516,8 @@
      <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/wildbeasts.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
      </div>
      <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/balloon.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
+     </div>
+    <div class="gallery-item fade-in rounded-xl overflow-hidden aspect-square"><img src="images/cheetah.jpg" class="canva-image w-full h-full object-cover transition-transform duration-500" loading="lazy">
     
     </div>
    </div>
