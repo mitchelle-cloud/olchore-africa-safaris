@@ -45,7 +45,7 @@
    </div>
   </header><!-- Explore Kenya / Destinations -->
 
-<!-- Premium Safari Video Slideshow -->
+    <!-- Premium Safari Video Slideshow -->
 <section class="py-16 px-6 bg-[#1a4d2e]">
   <div class="max-w-7xl mx-auto">
 
@@ -85,11 +85,10 @@
           <source src="images/safari2.mp4" type="video/mp4">
         </video>
 
-         <!-- Video 3 -->
+        <!-- Video 3 -->
         <video
           id="safariVideo3"
-          class="safari-slide w-full h-[300px] md:h-[550px] object-cover"
-          autoplay
+          class="safari-slide hidden w-full h-[300px] md:h-[550px] object-cover"
           muted
           playsinline
           preload="auto">
@@ -143,18 +142,16 @@
         </button>
 
       </div>
-
     </div>
-
   </div>
 </section>
 
 <script>
-  const video1 = document.getElementById("safariVideo1");
-  const video2 = document.getElementById("safariVideo2");
-  const video3 = document.getElementById("safariVideo3");
-
-  const videos = [video1, video2, video3];
+  const videos = [
+    document.getElementById("safariVideo1"),
+    document.getElementById("safariVideo2"),
+    document.getElementById("safariVideo3")
+  ];
 
   const prevButton = document.getElementById("safariPrev");
   const nextButton = document.getElementById("safariNext");
@@ -174,20 +171,20 @@
   }
 
   function nextVideo() {
-    currentVideo = (currentVideo + 1) % videos.length;
-    showVideo(currentVideo);
+    const nextIndex = (currentVideo + 1) % videos.length;
+    showVideo(nextIndex);
   }
 
   function previousVideo() {
-    currentVideo =
+    const previousIndex =
       (currentVideo - 1 + videos.length) % videos.length;
 
-    showVideo(currentVideo);
+    showVideo(previousIndex);
   }
 
-  video1.addEventListener("ended", nextVideo);
-  video2.addEventListener("ended", nextVideo);
-  video3.addEventListener("ended", nextVideo);
+  videos.forEach(video => {
+    video.addEventListener("ended", nextVideo);
+  });
 
   nextButton.addEventListener("click", nextVideo);
   prevButton.addEventListener("click", previousVideo);
